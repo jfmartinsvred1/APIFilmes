@@ -10,7 +10,7 @@ GetConnectionString("FilmeConnection");
 
 builder.
     Services.
-    AddDbContext<FilmesContext>(opts => opts.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString)));
+    AddDbContext<FilmesContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // Add services to the container.
 
