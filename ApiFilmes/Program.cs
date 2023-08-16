@@ -10,7 +10,7 @@ GetConnectionString("FilmeConnection");
 
 builder.
     Services.
-    AddDbContext<FilmesContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    AddDbContext<FilmesContext>(opts => opts.UseLazyLoadingProxies().UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.
     AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
